@@ -7,7 +7,7 @@ from qiskit_ibm_provider import IBMProvider
 #IBM에서 복사한 토근을 로컬에 저장하기
 provider = IBMProvider(token='put_your_token') 
 backends = provider.backends()
-from qiskit import QuantumCircuit
+from qiskit import QuantumCircuit 
 from qiskit_aer import AerSimulator,Aer
 from qiskit.primitives import Estimator, Sampler # qiskit.primitives에서 Estimator와 Sampler를 가져오기
 from qiskit.visualization import plot_histogram
