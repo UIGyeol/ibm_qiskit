@@ -34,27 +34,7 @@ circ.measure(range(n_output), range(n_output))
 
 #Visualizing Circuit
 circ.draw(output='mpl',justify='none')
-#Testing circuit
-backend = Aer.get_backend('aer_simulator')
-job = backend.run(circ)
-result = job.result()
-
-#Visualizing
-count_bv = result.get_counts()
-print(count_bv)
-plot_histogram(count_bv)
-
-IBMProvider.save_account('put_your_token')
-prov=IBMProvider()
-prov.backends()
-# 이렇게 하면 내가 백엔드에서 사용할 수 있는 계정의 목록이 나옴
-# 사용할 계정을 선택
-backend=prov.get_backend('ibm_brisbane')
-
-
-from qiskit.visualization import plot_error_map # plot_error_map 함수를 import합니다.
-
-plot_error_map(backend) # 이제 함수를 사용할 수 있으므로 호출할 수 있습니다.
+#Testing c다
 
 # 양자 백엔드마다 기본적으로 사용하는 게이트가 다를 수 있기 때문에  
 # transpile로 양자 백엔드가 사용할 수 있게 한 번 번역해 줘야한다. 
